@@ -11,8 +11,6 @@ android {
     defaultConfig {
         minSdk 21
         targetSdk 33
-        versionName "1.0.0"
-        versionCode 1
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
     }
@@ -30,25 +28,19 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
-    publishing {
-        singleVariant("release") {
-            withSourcesJar()
-            withJavadocJar()
-        }
-    }
+
 }
 
-publishing {
-    publications {
-        release(MavenPublication) {
-            groupId = 'com.parrypatel.csimageview'
-            artifactId = 'CSImageView'
-            version = '1.0.1'
+// --- Maven Local Publish Script (We only need this for local publish, to test the library)--- //
+afterEvaluate {
+    android.libraryVariants.each{variant->
+        publishing.publications.create(variant.name, MavenPublication){
+            from components.findByName(variant.name)
 
-            afterEvaluate {
-                from components.release
-            }
-        }
+            groupId = 'com.parrypatel'
+            artifactId = "CSImageView"
+            version = '1.0.0'
+        } //
     }
 }
 
