@@ -17,15 +17,4 @@
 		app:srcCompat="@drawable/selector_on_off_flash"
 		app:tint="@color/pink" />
 
-<!--	<com.google.android.material.textview.MaterialTextView-->
-<!--		android:id="@+id/tvState"-->
-<!--		android:layout_width="wrap_content"-->
-<!--		android:layout_height="wrap_content"-->
-<!--		android:layout_marginTop="16dp"-->
-<!--		android:text="@string/app_name"-->
-<!--		android:textSize="@color/black"-->
-<!--		app:layout_constraintEnd_toEndOf="parent"-->
-<!--		app:layout_constraintStart_toStartOf="parent"-->
-<!--		app:layout_constraintTop_toBottomOf="@+id/csImage" />-->
-
 </androidx.constraintlayout.widget.ConstraintLayout>
