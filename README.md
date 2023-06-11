@@ -15,5 +15,5 @@ allprojects {
 
 * Add below line into your `app/build.gradle` file <br />
 ```
-implementation 'com.github.ParryPatel021:CSImageView:<Jttpack version>'
+implementation 'com.github.ParryPatel021:CSImageView:<Jitpack Version>'
 ```
